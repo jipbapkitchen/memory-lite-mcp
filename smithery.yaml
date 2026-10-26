@@ -1,0 +1,13 @@
+# Smithery configuration (local stdio server). https://smithery.ai/docs
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    description: No configuration needed. Optional custom database path.
+    properties:
+      dbPath:
+        type: string
+        description: Path to the SQLite file (default ~/.memory-lite/memory.db)
+  commandFunction: |-
+    (config) => ({ command: 'uvx', args: ['memory-lite-mcp'], env: config.dbPath ? { MEMORY_LITE_DB: config.dbPath } : {} })
+  exampleConfig: {}

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memory-lite-mcp"
+version = "1.0.0"
+description = "Free, tiny, local memory MCP server (remember / recall / forget) on SQLite. Zero dependencies."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "Jipbap Kitchen" }]
+keywords = ["mcp", "model-context-protocol", "memory", "sqlite", "claude", "cursor"]
+dependencies = []
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent"]
+
+[project.urls]
+"Full edition" = "https://bamsuni.com/ai-shop/en/"
+
+[project.scripts]
+memory-lite-mcp = "memory_lite_mcp:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
